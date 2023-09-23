@@ -1,6 +1,7 @@
 /* Start of General CSS */
 header,
-footer {
+footer,
+.register {
     background-color: #fffaef;
 }
 .tea-bg {
@@ -101,39 +102,6 @@ footer {
         padding: 0;
     }
 }
-/* .resize {
-    text-align: center;
-}
-.resize {
-    margin-top: 3rem;
-    font-size: 1.25rem;
-}
-.fa-angle-double-right {
-    animation: rightanime 1s linear infinite;
-}
-.fa-angle-double-left {
-    animation: leftanime 1s linear infinite;
-}
-@keyframes rightanime {
-    50% {
-        transform: translateX(10px);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateX(10px);
-        opacity: 0;
-    }
-}
-@keyframes leftanime {
-    50% {
-        transform: translateX(-10px);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateX(-10px);
-        opacity: 0;
-    }
-} */
 ul > li .navlink:hover {
     color: #422a13;
     border-bottom: 2px solid #422a13;
@@ -183,3 +151,26 @@ ul > li .navlink:hover {
     background-color: #624325;
 }
 /* End of Home/Index Page */
+
+/* Start of Login & Registration */
+.card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+.card-title {
+    padding: 20px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #422a13;
+    font-family: "Poppins", sans-serif;
+}
+.card-body {
+    padding: 0 20px 20px 20px;
+}
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+/* End of Login & Registration */
