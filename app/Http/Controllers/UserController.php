@@ -35,7 +35,7 @@ class UserController extends Controller
         // logs the newly created user
         auth()->login($user);
 
-        return redirect('/')->with('message', 'User created and logged in!');
+        return redirect()->route('home')->with('message', 'User created and logged in!');
         // ===============================================================================
     }
 
@@ -49,7 +49,7 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('message', 'You have been logged out!');
+        return redirect()->route('home')->with('message', 'You have been logged out!');
     }
 
     // Show Login Form
@@ -70,7 +70,7 @@ class UserController extends Controller
         if (auth()->attempt($formFields)) {
             //generate new session id for user
             $request->session()->regenerate();
-            return redirect('/')->with('message', 'You are now logged in!');
+            return redirect()->route('home')->with('message', 'You are now logged in!');
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
