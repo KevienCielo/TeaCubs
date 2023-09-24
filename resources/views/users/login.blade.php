@@ -1,6 +1,6 @@
 @section('logo-header')
   <div class="d-flex justify-content-center py-4">
-    <a href="/" class="navbar-brand d-flex justify-content-center align-items-center">
+    <a href="{{ route('home') }}" class="navbar-brand d-flex justify-content-center align-items-center">
       <img src="images/teacubs-logo.png" width="60" height="45" class="d-inline-block align-top" alt="Tea Cubs Logo" />
       <p class="m-auto h2">
         <span class="tea-span">Tea</span>
@@ -17,7 +17,7 @@
         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
         <p class="text-center small">Enter your username & password to login</p>
       </div>
-      <form class="row g-3" action="/users/authenticate " method="POST">
+      <form class="row g-3" action="{{ route('authenticate') }}" method="POST">
         @csrf
         <div class="col-12">
           <label for="email" class="form-label">Email</label>
@@ -48,7 +48,7 @@
         <div class="col-12">
           <p class="small mb-0">
             Don't have an account?
-            <a href="/register">Register</a>
+            <a href="{{ route('register') }}">Register</a>
           </p>
         </div>
     </div>

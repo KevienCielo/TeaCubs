@@ -1,6 +1,6 @@
 @section('logo-header')
   <div class="d-flex justify-content-center py-4">
-    <a href="/" class="navbar-brand d-flex justify-content-center align-items-center">
+    <a href="{{ route('home') }}" class="navbar-brand d-flex justify-content-center align-items-center">
       <img src="images/teacubs-logo.png" width="60" height="45" class="d-inline-block align-top" alt="Tea Cubs Logo" />
       <p class="m-auto h2">
         <span class="tea-span">Tea</span>
@@ -17,7 +17,7 @@
         <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
         <p class="text-center small">Enter your personal details to create account</p>
       </div>
-      <form class="row g-3" action="/users" method="POST">
+      <form class="row g-3" action="{{ route('create-user') }}" method="POST">
         @csrf
         <div class="col-12">
           <label for="name" class="form-label">Name</label>
@@ -62,7 +62,7 @@
         <div class="col-12">
           <p class="small mb-0">
             Already have an account?
-            <a href="/login">Login</a>
+            <a href="{{ route('login') }}">Login</a>
           </p>
         </div>
       </form>

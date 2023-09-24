@@ -1,7 +1,7 @@
 <header class="shadow">
   <nav class="navbar navbar-expand-md sticky-top header">
     <div class="container-lg">
-      <a href="/" class="navbar-brand d-flex justify-content-center align-items-center">
+      <a href="{{ route('home') }}" class="navbar-brand d-flex justify-content-center align-items-center">
         <img src="images/teacubs-logo.png" width="80" height="60" class="d-inline-block align-top"
           alt="Tea Cubs Logo" />
         <p class="m-auto h3">
@@ -53,7 +53,7 @@
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <form action="/logout" method="POST">
+                  <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button class="dropdown-item" type="submit">Logout</button>
                   </form>
@@ -64,13 +64,13 @@
         @else
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="/login" class=" fw-bold fs-5 nav-link me-2">
+              <a href="{{ route('login') }}" class=" fw-bold fs-5 nav-link me-2">
                 <i class="bi bi-box-arrow-in-right icons"></i>
                 Login
               </a>
             </li>
             <li class="nav-item">
-              <a href="/register"class=" fw-bold fs-5 nav-link ">
+              <a href="{{ route('register') }}"class=" fw-bold fs-5 nav-link ">
                 <i class="bi bi-person-plus icons"></i>
                 Register
               </a>
